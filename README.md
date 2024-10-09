@@ -35,6 +35,17 @@ This is a full-stack project that deploys a **Flask backend** with a **Streamlit
    - **Database Name**: `myappdb`
    - **User**: `myuser`
    - **Password**: `mypassword`
+
+SQL to create Postgres database, and table which can be used to store data.
+
+CREATE DATABASE myappdb;
+CREATE USER myuser WITH ENCRYPTED PASSWORD 'mypassword';
+GRANT ALL PRIVILEGES ON DATABASE myappdb TO myuser;
+CREATE TABLE data_table (
+    id SERIAL PRIMARY KEY,
+    value TEXT NOT NULL
+);
+
 3. **Enable public IP access** or use the **Cloud SQL Auth Proxy**.
 
 ### 4. Set Up Google Cloud Storage (GCS)
